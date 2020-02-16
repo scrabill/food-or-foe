@@ -62,6 +62,7 @@ GEM
     byebug (11.1.1)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    dotenv (2.7.5)
     erubi (1.9.0)
     ffi (1.12.2)
     globalid (0.4.2)
@@ -153,6 +154,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  dotenv
   listen (>= 3.0.5, < 3.2)
   puma (~> 4.1)
   rack-cors
