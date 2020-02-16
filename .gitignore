@@ -13,6 +13,7 @@
 
 # Ignore schema
 /backend/db/schema.rb
+backend/db/schema.rb
 
 # Ignore all logfiles and tempfiles.
 /backend/log/*
