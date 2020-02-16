@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Emoji.create(slug: "burger", character: "🍔")
+Emoji.create(slug: "rocket ship", character: "🚀")
+Emoji.create(slug: "unicorn", character: "🦄")
+Emoji.create(slug: "shrimp", character: "🍤")
