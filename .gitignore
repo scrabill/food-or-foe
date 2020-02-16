@@ -5,36 +5,36 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/backend/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+/backend/db/*.sqlite3
+/backend/db/*.sqlite3-journal
 
 # Ignore schema
-/db/schema.rb
+/backend/db/schema.rb
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/backend/log/*
+/backend/tmp/*
+/backend!/log/.keep
+/backend!/tmp/.keep
 
 # Ignore uploaded files in development
-/storage/*
-!/storage/.keep
+/backend/storage/*
+/backend!/storage/.keep
 
-/node_modules
-/yarn-error.log
+/backend/node_modules
+/backend/yarn-error.log
 
-/public/assets
-.byebug_history
+/backend/public/assets
+/backend/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+/backend/config/master.key
 
 # Ignore environmental variables
-.env
+/backend.env
 
 # Ignore process, scratch and reference files
 /process
