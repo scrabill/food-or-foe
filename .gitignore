@@ -35,7 +35,7 @@ backend/db/schema.rb
 /backend/config/master.key
 
 # Ignore environmental variables
-/backend.env
+.env
 
 # Ignore process, scratch and reference files
 /process
