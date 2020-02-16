@@ -7,14 +7,18 @@
   </head>
   <body>
     <h1>Food or Foe?</h1>
+
+    <h2 id="counter">0</h2>
     <!-- twemoji.parse("🍕") -->
 
-    <button type="button" name="button" id="food">Food</button>
-    <button type="button" name="button" id="foe">Foe</button>
+    <button type="button" name="button" id="start">Start Game!</button>
+    <button type="button" name="button" id="food" disabled>Food</button>
+    <button type="button" name="button" id="foe" disabled>Foe</button>
 
 
-    <script src="src/components/app.js" /></script>
     <script src="src/adapters/EmojisAdapter.js" /></script>
+    <script src="src/components/emojis.js" /></script>
+    <script src="src/components/app.js" /></script>
     <script src="js/index.js" /></script>
   </body>
 
