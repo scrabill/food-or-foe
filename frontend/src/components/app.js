@@ -30,8 +30,6 @@ class App {
       // Start the timer
       this.startTimer()
 
-      // End the timer
-      // setTimeout(endTimer, 3000)
     });
   }
 
