@@ -3,6 +3,7 @@ class Emojis {
     this.emojis = []
     this.adapter = new EmojisAdapter()
     this.fetchAndLoadEmojis()
+    this.length()
   }
 
   fetchAndLoadEmojis() {
@@ -14,6 +15,7 @@ class Emojis {
     })
     .then(() => {
       this.render()
+      this.randomEmoji()
     })
   }
 
@@ -21,6 +23,14 @@ class Emojis {
     console.log("Rendering emojis...")
     const emojiArray = this.emojis.map(emoji => emoji.character)
     console.log(emojiArray)
+  }
+
+  randomEmoji() {
+    this.emojis[Math.floor(Math.random() * this.emojis.length)]
+  }
+
+  length() {
+    this.emojis.length
   }
 
 }

@@ -3,24 +3,24 @@ const app = new App()
 
 const emojis = ["🍇","🍉","🍊","🍋","🚀","🦄","🤖"]
 const other = ["🚀","🦄","🤖"]
-const h1 = document.querySelector("h1");
+const h2 = document.querySelector("#emoji");
 
-const startButton = document.querySelector("#start")
+// const startButton = document.querySelector("#start")
 const foodButton = document.querySelector("#food")
 const foeButton = document.querySelector("#foe")
-const counter = document.getElementById("counter");
+// const counter = document.getElementById("counter");
 
-let currentEmoji = ""
-let score = 0
-let currentCount = 3
-let timer = ""
+// let currentEmoji = ""
+// let score = 0
+// let currentCount = 3
+// let timer = ""
 
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
-    startButton.addEventListener('click', (e) => {
-      startGame(e);
-    });
+    // startButton.addEventListener('click', (e) => {
+    //   startGame(e);
+    // });
 });
 
 // Prompt user to start the game
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function startGame(e) {
 
-  // Start the timer
-  startTimer()
-
-  // End the timer
-  setTimeout(endTimer, 3000)
+  // // Start the timer
+  // startTimer()
+  //
+  // // End the timer
+  // setTimeout(endTimer, 3000)
 
   foodButton.removeAttribute("disabled")
   foeButton.removeAttribute("disabled")
@@ -47,13 +47,13 @@ function startGame(e) {
 
 }
 
-function startTimer() {
-  timer = window.setInterval(printTime, 1000);
-}
-
-function endTimer() {
-  clearInterval(timer)
-}
+// function startTimer() {
+//   timer = window.setInterval(printTime, 1000);
+// }
+//
+// function endTimer() {
+//   clearInterval(timer)
+// }
 //
 function displayScore() {
   console.log(score)
@@ -74,25 +74,25 @@ function turn() {
 
 //
 //
-function printTime(timer) {
-  if (currentCount != 0) {
-    currentCount --;
-    document.getElementById("counter").innerHTML = currentCount;
-  } else if (currentCount == 0 ) {
-    console.log(currentCount)
-    clearInterval(timer)
-    console.log(currentCount)
-
-    displayScore()
-    clearInterval(timer)
-    // console.log("Times up!")
-  }
-
-}
+// function printTime(timer) {
+//   if (currentCount != 0) {
+//     currentCount --;
+//     document.getElementById("counter").innerHTML = currentCount;
+//   } else if (currentCount == 0 ) {
+//     console.log(currentCount)
+//     clearInterval(timer)
+//     console.log(currentCount)
+//
+//     displayScore()
+//     clearInterval(timer)
+//     // console.log("Times up!")
+//   }
+//
+// }
 
 function displayAnEmoji() {
     currentEmoji = emojis[Math.floor(Math.random() * emojis.length)]
-    h1.innerText = currentEmoji
+    h2.innerText = currentEmoji
     makeAGuess()
 
     return currentEmoji
