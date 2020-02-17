@@ -39,8 +39,8 @@ function startGame(e) {
   // // End the timer
   // setTimeout(endTimer, 3000)
 
-  foodButton.removeAttribute("disabled")
-  foeButton.removeAttribute("disabled")
+  // foodButton.removeAttribute("disabled")
+  // foeButton.removeAttribute("disabled")
   //
   turn();
   // makeAGuess();

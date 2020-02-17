@@ -23,6 +23,10 @@ class App {
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
       console.log("THE GAME HAS BEGUN")
+      // Enable game buttons
+      foodButton.removeAttribute("disabled")
+      foeButton.removeAttribute("disabled")
+
       // Start the timer
       this.startTimer()
 
