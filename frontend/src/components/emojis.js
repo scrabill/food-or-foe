@@ -6,9 +6,11 @@ class Emojis {
   }
 
   fetchAndLoadEmojis() {
-    console.log("whomp")
-    this.adapter.getEmojis().then(emojis => {
-      return console.log(emojis)
+    console.log("Loading emoji :P")
+    this.adapter.getEmojis()
+    .then(emojis => {
+      emojis.forEach(emoji => this.emojis.push(emoji))
+      // return console.log(emojis)
     })
     .then(() => {
       this.render()
@@ -16,7 +18,9 @@ class Emojis {
   }
 
   render() {
-    console.log("Rendering...")
+    console.log("Rendering emojis...")
+    const emojiArray = this.emojis.map(emoji => emoji.character)
+    console.log(emojiArray)
   }
 
 }
