@@ -43,11 +43,14 @@ class Games {
     // let timer = window.setInterval(this.printTime, 1000);
     console.log(this.counterContainer)
 
+    let countercounterContainer = this.counterContainer;
     let counter = this.counterContainer.textContent;
 
     let printTime = setInterval(function() {
         counter--;
         console.log(counter)
+        countercounterContainer.innerHTML = counter
+        // this.counterContainer.innerText = counter
         // console.log(this)
         // this.counterContainer.innerText = counter;
         if (counter <= 0) clearInterval(printTime);
