@@ -10,6 +10,23 @@ class Emojis {
 
   initBindingsAndEventListeners() {
     this.emojiContainer = document.querySelector("#emoji")
+
+    this.foodButton = document.querySelector("#food")
+    this.foeButton = document.querySelector("#foe").addEventListener('click', (e) => {
+      this.displayEmoji()
+    })
+    this.foodButton = document.querySelector("#food")
+    this.foeButton = document.querySelector("#foe").addEventListener('click', (e) => {
+      this.displayEmoji()
+    })
+
+    this.startGame = document.querySelector("#start")
+    this.startGame.addEventListener('click', (e) => {
+
+      // Start showing emojis....but this need to change while the clock is running, and refresh once a button is clicked. It shoudl stop when the clock is at zero
+      this.displayEmoji()
+
+    });
   }
 
   fetchAndLoadEmojis() {
@@ -32,7 +49,11 @@ class Emojis {
   }
 
   randomEmoji() {
-    this.emojis[Math.floor(Math.random() * this.emojis.length)]
+    return this.emojis[Math.floor(Math.random() * this.emojis.length)]
+  }
+
+  displayEmoji() {
+    this.emojiContainer.innerHTML = this.randomEmoji().character
   }
 
   length() {
