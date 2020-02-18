@@ -4,6 +4,12 @@ class Emojis {
     this.adapter = new EmojisAdapter()
     this.fetchAndLoadEmojis()
     this.length()
+
+    this.initBindingsAndEventListeners()
+  }
+
+  initBindingsAndEventListeners() {
+    this.emojiContainer = document.querySelector("#emoji")
   }
 
   fetchAndLoadEmojis() {
