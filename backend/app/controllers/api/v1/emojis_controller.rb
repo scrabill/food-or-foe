@@ -4,4 +4,10 @@ class Api::V1::EmojisController < ApplicationController
 
     render json: @emojis, status: 200
   end
+
+  def food
+    @emojis = Emoji.food
+
+    render json: @emojis, status: 200
+  end
 end

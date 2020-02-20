@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get '/emojis/food',  to: 'emojis#food'
+
       resources :emojis, :users, :games
     end
   end
