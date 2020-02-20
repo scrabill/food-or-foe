@@ -5,6 +5,12 @@ class Api::V1::EmojisController < ApplicationController
     render json: @emojis, status: 200
   end
 
+  def show
+    @emoji = Emoji.find_by_id(params[:id])
+
+    render json: @emoji, status: 200
+  end
+
   def food
     @emojis = Emoji.food
 
