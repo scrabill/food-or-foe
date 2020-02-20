@@ -1,10 +1,12 @@
 class Emojis {
   constructor() {
     this.emojis = []
+    this.foodEmojis = []
     this.adapter = new EmojisAdapter()
     this.fetchAndLoadEmojis()
+    this.fetchAndLoadFoodEmojis()
     this.length()
-
+    this.currentEmoji =
     this.initBindingsAndEventListeners()
   }
 
@@ -12,12 +14,12 @@ class Emojis {
     this.emojiContainer = document.querySelector("#emoji")
 
     this.foodButton = document.querySelector("#food")
-    this.foeButton = document.querySelector("#foe").addEventListener('click', (e) => {
-      this.displayEmoji()
+    this.foodButton = document.querySelector("#food").addEventListener('click', (e) => {
+      this.makeAGuess(e)
     })
-    this.foodButton = document.querySelector("#food")
+    this.foeButton = document.querySelector("#foe")
     this.foeButton = document.querySelector("#foe").addEventListener('click', (e) => {
-      this.displayEmoji()
+      this.makeAGuess(e)
     })
 
     this.startGame = document.querySelector("#start")
@@ -42,6 +44,17 @@ class Emojis {
     })
   }
 
+  fetchAndLoadFoodEmojis() {
+    console.log("FOOOOOD")
+    this.adapter.getFoodEmojis()
+    .then(emojis => {
+      emojis.forEach(emoji => this.foodEmojis.push(emoji))
+    })
+    .then(() => {
+      this.render()
+    })
+  }
+
   render() {
     console.log("Rendering emojis...")
     const emojiArray = this.emojis.map(emoji => emoji.character)
@@ -49,15 +62,47 @@ class Emojis {
   }
 
   randomEmoji() {
-    return this.emojis[Math.floor(Math.random() * this.emojis.length)]
+    this.currentEmoji = this.emojis[Math.floor(Math.random() * this.emojis.length)]
   }
 
   displayEmoji() {
-    this.emojiContainer.innerHTML = this.randomEmoji().character
+    this.emojiContainer.innerHTML = this.currentEmoji.character
   }
 
   length() {
     this.emojis.length
+  }
+
+  makeAGuess(e) {
+    console.log(`The current emoji is: ${this.currentEmoji.character}`)
+
+    let myGuess = e.target.id
+
+    // TODO: Move this into a class method. We don't need to recreate it each time
+    let foods = this.foodEmojis.map(function(element) {
+      return element.character
+    });
+
+    let isFood = foods.includes(this.currentEmoji.character);
+
+    if (isFood == true) {
+
+      if (myGuess == "food") {
+        console.log("correct")
+      } else {
+        console.log("wrong")
+      }
+
+    } else {
+
+      if (myGuess == "foe") {
+        console.log("correct")
+      } else {
+        console.log("wrong")
+      }
+    }
+
+
   }
 
 }
