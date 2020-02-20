@@ -102,6 +102,8 @@ class Emojis {
       }
     }
 
+    this.randomEmoji()
+    this.displayEmoji()
 
   }
 
