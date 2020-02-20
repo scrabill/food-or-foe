@@ -14,6 +14,8 @@ class Emojis {
   initBindingsAndEventListeners() {
     this.emojiContainer = document.querySelector("#emoji")
 
+    this.score = document.querySelector("#score")
+
     this.foodButton = document.querySelector("#food")
     this.foodButton = document.querySelector("#food").addEventListener('click', (e) => {
       this.makeAGuess(e)
@@ -110,7 +112,7 @@ class Emojis {
 
   keepScore(point) {
     this.currentScore += point
-    console.log(`The current score is: ${this.currentScore}`)
+    this.score.innerHTML = `Your Score: ${this.currentScore}`
   }
 
 
