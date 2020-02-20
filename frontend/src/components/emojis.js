@@ -63,7 +63,7 @@ class Emojis {
   }
 
   displayEmoji() {
-    this.emojiContainer.innerHTML = this.currentEmoji.character
+    this.emojiContainer.innerHTML = twemoji.parse(this.currentEmoji.character)
   }
 
   length() {
