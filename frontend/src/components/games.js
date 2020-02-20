@@ -44,7 +44,6 @@ class Games {
   }
 
   fetchAndLoadGames() {
-    console.log("Bzz. Loading Games...")
     this.adapter.getGames()
     .then(games => {
       games.forEach(game => this.games.push(game))
@@ -59,8 +58,6 @@ class Games {
   }
 
   render() {
-    console.log("Rendering...")
-    console.log(this.games)
   }
 
   // TODO: Add name of player to score
