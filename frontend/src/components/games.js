@@ -8,6 +8,9 @@ class Games {
 
   // Inherit properys and bindings, etc to emojis and games? Extends?
   initBindingsAndEventListeners() {
+    this.form = document.querySelector("#form")
+    this.submitButton = document.querySelector("#submit")
+
     this.leaderboard = document.querySelector("#leaderboard")
 
     this.counterContainer = document.querySelector("#counter")
@@ -28,6 +31,9 @@ class Games {
 
       // Start the timer
       this.startTimer()
+
+      // When the timer runs out, render the form to save your game
+      setTimeout(this.renderForm, (3000));
 
     });
   }
@@ -77,6 +83,28 @@ class Games {
   // TODO: Add name of player to score
   renderScores() {
     this.leaderboard.innerHTML = this.games.map(game => `<li>${game.score}</li>`).join('')
+  }
+
+
+  renderForm() {
+
+    let form = document.createElement("form")
+    let inputText = document.createElement("input")
+    let inputSubmit = document.createElement("input")
+
+    inputText.setAttribute("type", "text")
+    inputText.setAttribute("name", "name")
+    inputText.setAttribute("placeholder", "please enter your name")
+
+    inputSubmit.setAttribute("type", "submit")
+    inputSubmit.setAttribute("value", "Add to Leaderboard")
+    inputSubmit.setAttribute("id", "submit")
+
+    form.appendChild(inputText)
+    form.appendChild(inputSubmit)
+
+    return this.form.appendChild(form)
+
   }
 
 }
