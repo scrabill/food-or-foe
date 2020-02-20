@@ -6,10 +6,11 @@ class Api::V1::UsersController < ApplicationController
     render json: @users.to_json(include: [:game]), status: 200
   end
 
+  # TODO: Update to find by name
   def show
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by_id(params[:id])
 
-    render json: @user, status: 200
+    render json: @user.to_json(include: [:game]), status: 200
   end
 
   def create
