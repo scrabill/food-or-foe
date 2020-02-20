@@ -13,7 +13,7 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create(user_params)
+    @game = Game.create(game_params)
 
     render json: @game, status: 200
   end

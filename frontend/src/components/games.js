@@ -14,6 +14,10 @@ class Games {
 
     this.foodButton = document.querySelector("#food")
     this.foeButton = document.querySelector("#foe")
+    this.saveGame = document.querySelector("#save")
+    this.saveGame.addEventListener('click', (e) => {
+      this.createGame(e);
+    });
 
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
@@ -41,6 +45,16 @@ class Games {
         if (counter <= 0) clearInterval(printTime);
     }, 1000);
 
+  }
+
+  createGame() {
+    console.log("Saving the game...")
+    const body = {
+      user_id: 1,
+      score: 123
+    }
+
+    this.adapter.createGame(body)
   }
 
   fetchAndLoadGames() {
