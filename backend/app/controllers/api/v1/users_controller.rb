@@ -28,6 +28,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:game).permit(:user, :score)
+      params.require(:user).permit(:name, :game_id)
     end
 end
