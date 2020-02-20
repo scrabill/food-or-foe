@@ -12,12 +12,15 @@ class Games {
 
     this.counterContainer = document.querySelector("#counter")
 
+    this.foodButton = document.querySelector("#food")
+    this.foeButton = document.querySelector("#foe")
+
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
       console.log("THE GAME HAS BEGUN")
       // Enable game buttons
-      foodButton.removeAttribute("disabled")
-      foeButton.removeAttribute("disabled")
+      this.foodButton.removeAttribute("disabled")
+      this.foeButton.removeAttribute("disabled")
 
       // Start the timer
       this.startTimer()
@@ -39,7 +42,7 @@ class Games {
     }, 1000);
 
   }
-  
+
   fetchAndLoadGames() {
     console.log("Bzz. Loading Games...")
     this.adapter.getGames()
