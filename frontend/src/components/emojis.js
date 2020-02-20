@@ -33,7 +33,6 @@ class Emojis {
   }
 
   fetchAndLoadEmojis() {
-    console.log("Loading emoji :P")
     this.adapter.getEmojis()
     .then(emojis => {
       emojis.forEach(emoji => this.emojis.push(emoji))
@@ -46,7 +45,6 @@ class Emojis {
   }
 
   fetchAndLoadFoodEmojis() {
-    console.log("FOOOOOD")
     this.adapter.getFoodEmojis()
     .then(emojis => {
       emojis.forEach(emoji => this.foodEmojis.push(emoji))
@@ -57,9 +55,7 @@ class Emojis {
   }
 
   render() {
-    console.log("Rendering emojis...")
     const emojiArray = this.emojis.map(emoji => emoji.character)
-    console.log(emojiArray)
   }
 
   randomEmoji() {
