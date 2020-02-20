@@ -7,6 +7,7 @@ class Emojis {
     this.fetchAndLoadFoodEmojis()
     this.length()
     this.currentEmoji =
+    this.currentScore = 0
     this.initBindingsAndEventListeners()
   }
 
@@ -88,16 +89,20 @@ class Emojis {
     if (isFood == true) {
 
       if (myGuess == "food") {
+        this.keepScore(1)
         console.log("correct")
       } else {
+        this.keepScore(0)
         console.log("wrong")
       }
 
     } else {
 
       if (myGuess == "foe") {
+        this.keepScore(1)
         console.log("correct")
       } else {
+        this.keepScore(0)
         console.log("wrong")
       }
     }
@@ -106,5 +111,12 @@ class Emojis {
     this.displayEmoji()
 
   }
+
+  keepScore(point) {
+    this.currentScore += point
+    console.log(`The current score is: ${this.currentScore}`)
+  }
+
+
 
 }
