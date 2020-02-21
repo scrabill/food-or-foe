@@ -3,7 +3,7 @@ class Api::V1::GamesController < ApplicationController
   def index
     @games = Game.all
 
-    render json: @games, status: 200
+    render json: @games.to_json(include: [:user]), status: 200
   end
 
   def show
