@@ -80,9 +80,8 @@ class Games {
   render() {
   }
 
-  // TODO: Add name of player to score
   renderScores() {
-    this.leaderboard.innerHTML = this.games.map(game => `<li>${game.score}</li>`).join('')
+    this.leaderboard.innerHTML = this.games.map(game => `<li>${game.score} - ${game.user.name}</li>`).join('')
   }
 
 
