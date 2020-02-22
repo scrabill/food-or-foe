@@ -22,10 +22,6 @@ class Games {
 
     this.foodButton = document.querySelector("#food")
     this.foeButton = document.querySelector("#foe")
-    this.saveGame = document.querySelector("#save")
-    this.saveGame.addEventListener('click', (e) => {
-      this.createGame(e);
-    });
 
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
