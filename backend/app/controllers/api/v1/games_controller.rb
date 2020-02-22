@@ -24,6 +24,7 @@ class Api::V1::GamesController < ApplicationController
     else
       @user = User.create!(name: params[:name])
       @game.user = @user
+      @user.games << @game
     end
 
     if @game.save
