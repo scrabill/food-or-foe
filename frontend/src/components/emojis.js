@@ -90,7 +90,7 @@ class Emojis {
         this.keepScore(1)
         console.log("correct")
       } else {
-        this.keepScore(0)
+        this.keepScore(-1)
         console.log("wrong")
       }
 
@@ -100,7 +100,7 @@ class Emojis {
         this.keepScore(1)
         console.log("correct")
       } else {
-        this.keepScore(0)
+        this.keepScore(-1)
         console.log("wrong")
       }
     }
