@@ -27,7 +27,7 @@ class Emojis {
 
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
-
+      this.currentScore = 0
       // Start showing emojis....but this need to change while the clock is running, and refresh once a button is clicked. It shoudl stop when the clock is at zero
       this.displayEmoji()
 
@@ -112,7 +112,12 @@ class Emojis {
 
   // TODO: Save score as local variable or better format so that the UI reads "Score: #"
   keepScore(point) {
-    this.currentScore += point
+    if (this.currentScore + point < 0) {
+      this.currentScore = 0
+    } else {
+      this.currentScore += point
+    }
+
     this.score.innerHTML = `${this.currentScore}`
   }
 
