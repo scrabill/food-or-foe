@@ -93,6 +93,7 @@ class Games {
 
     inputText.setAttribute("type", "text")
     inputText.setAttribute("name", "name")
+    inputText.setAttribute("id", "name")
     inputText.setAttribute("placeholder", "please enter your name")
 
     inputSubmit.setAttribute("type", "submit")
