@@ -7,12 +7,6 @@ class Users {
   }
 
   initBindingsAndEventListeners() {
-    this.name = document.querySelector("#name")
-
-    this.submitButton = document.querySelector("#submit")
-    this.submitButton.addEventListener('click', (e) => {
-      // this.createUser(e)
-    });
 
   }
 
@@ -22,22 +16,8 @@ class Users {
       users.forEach(user => this.users.push(user))
     })
     .then(() => {
-      this.render()
     })
   }
 
-  // TODO: Find or create by name
-  // createUser(e) {
-  //   e.preventDefault
-  //
-  //   const data = {
-  //     name: this.name.value
-  //   }
-  //
-  //   this.adapter.createUser(data)
-  // }
-  //
-  // render() {
-  // }
 
 }
