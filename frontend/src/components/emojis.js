@@ -110,9 +110,10 @@ class Emojis {
 
   }
 
+  // TODO: Save score as local variable or better format so that the UI reads "Score: #"
   keepScore(point) {
     this.currentScore += point
-    this.score.innerHTML = `Your Score: ${this.currentScore}`
+    this.score.innerHTML = `${this.currentScore}`
   }
 
 
