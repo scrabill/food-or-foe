@@ -31,8 +31,8 @@ class Games {
       console.log("THE GAME HAS BEGUN")
       // Show game peice and enable game buttons
       this.peices.style.display = "block"
-      this.foodButton.toggleAttribute("disabled")
-      this.foeButton.toggleAttribute("disabled")
+      document.getElementById("food").disabled = false;
+      document.getElementById("foe").disabled = false;
 
       // Start the timer
       this.startTimer()
