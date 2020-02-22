@@ -95,7 +95,8 @@ class Games {
 // "updated_at": "2020-02-14T04:12:37.070Z"
 // }
 // }
-  createGame() {
+  createGame(e) {
+    e.preventDefault()
     console.log("Saving the game...")
     const body = {
       score: this.score.innerText,
