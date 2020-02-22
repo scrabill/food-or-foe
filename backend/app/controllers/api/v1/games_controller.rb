@@ -13,10 +13,31 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create(game_params)
 
-    render json: @game, status: 200
+    @game = Game.new(game_params)
+    @user = User.find_by(name: params[:name])
+
+    if @user
+      @game.user = @user
+    else
+      @user = User.create!(name: params[:user][:name])
+      @game.user = @user
+    end
+
+    if @game.save
+      render json: @game, status: 200
+    end
   end
+
+#   def create
+#     # binding.pry
+#     question = Question.new(question_params)
+#     user = User.find_by_id(params[:user_id])
+#     question.user = user
+#     if question.save
+#         render json: question, status: 200
+#     end
+# end
 
   def update
     @game = Game.find_by(name: params[:name])
@@ -28,6 +49,6 @@ class Api::V1::GamesController < ApplicationController
   private
 
     def game_params
-      params.require(:game).permit(:user_id, :score)
+      params.require(:game).permit(:user_id, :score, :name)
     end
 end
