@@ -110,7 +110,6 @@ class Emojis {
 
   }
 
-  // TODO: Save score as local variable or better format so that the UI reads "Score: #"
   keepScore(point) {
     if (this.currentScore + point < 0) {
       this.currentScore = 0
