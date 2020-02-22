@@ -100,21 +100,23 @@ class Games {
     console.log("Saving the game...")
     const body = {
       score: this.score.innerText,
-      user: {
-        name: this.nameInput.value
-      },
+      name: this.nameInput.value,
     }
 
     this.adapter.createGame(body)
+
+    .then(game => {
+      let gameObject = `<li>${game.score} - ${this.nameInput.value}</li>`
+      this.leaderboard.innerHTML += gameObject
+    })
+
   }
 
   fetchAndLoadGames() {
     this.adapter.getGames()
     .then(games => {
-      games.forEach(game => this.games.push(game))
-
-      // Games.forEach(Game => this.Games.push(new Game(Game)))
-      // return console.log(Games)
+      // games.forEach(game => this.games.push(game))
+      games.forEach(game => this.games.push(new Game(game)))
     })
     .then(() => {
       this.render()

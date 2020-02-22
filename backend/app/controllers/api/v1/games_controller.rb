@@ -22,7 +22,7 @@ class Api::V1::GamesController < ApplicationController
     if @user
       @game.user = @user
     else
-      @user = User.create!(name: params[:user][:name])
+      @user = User.create!(name: params[:name])
       @game.user = @user
     end
 
