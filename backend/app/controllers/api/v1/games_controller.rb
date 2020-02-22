@@ -12,6 +12,8 @@ class Api::V1::GamesController < ApplicationController
     render json: @game, status: 200
   end
 
+  # TODO: Account for if a new game is being created by a user that already exists (append to user games array) Validation failed: Name has already been taken
+
   def create
 
     @game = Game.new(game_params)
