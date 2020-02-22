@@ -11,7 +11,7 @@ class Users {
 
     this.submitButton = document.querySelector("#submit")
     this.submitButton.addEventListener('click', (e) => {
-      this.createUser(e)
+      // this.createUser(e)
     });
 
   }
@@ -27,17 +27,17 @@ class Users {
   }
 
   // TODO: Find or create by name
-  createUser(e) {
-    e.preventDefault
-
-    const data = {
-      name: this.name.value
-    }
-
-    this.adapter.createUser(data)
-  }
-
-  render() {
-  }
+  // createUser(e) {
+  //   e.preventDefault
+  //
+  //   const data = {
+  //     name: this.name.value
+  //   }
+  //
+  //   this.adapter.createUser(data)
+  // }
+  //
+  // render() {
+  // }
 
 }
