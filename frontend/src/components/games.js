@@ -8,8 +8,13 @@ class Games {
 
   // Inherit properys and bindings, etc to emojis and games? Extends?
   initBindingsAndEventListeners() {
+    this.score = document.querySelector("#score")
     this.form = document.querySelector("#form")
+    this.nameInput = document.querySelector("#name")
     this.submitButton = document.querySelector("#submit")
+    this.submitButton.addEventListener('click', (e) => {
+      this.createGame(e);
+    });
 
     this.leaderboard = document.querySelector("#leaderboard")
 
@@ -53,11 +58,37 @@ class Games {
 
   }
 
+  findUserByID(id) {
+    console.log("Finding a user")
+    console.log("Rendering...")
+    console.log(this.users)
+    let user = this.users.find(user => user.id == id )
+    console.log(user)
+    return user
+  }
+
+  // {"score"=>"", "game"=>{"score"=>""}}
+
+//   {
+// "id": 37,
+// "user_id": 1,
+// "score": 123,
+// "created_at": "2020-02-22T01:08:48.701Z",
+// "updated_at": "2020-02-22T01:08:48.701Z",
+// "user": {
+// "id": 1,
+// "name": "Shannon",
+// "created_at": "2020-02-14T04:12:37.070Z",
+// "updated_at": "2020-02-14T04:12:37.070Z"
+// }
+// }
   createGame() {
     console.log("Saving the game...")
     const body = {
-      user_id: 1,
-      score: 123
+      score: this.score.innerText,
+      user: {
+        name: this.nameInput.value
+      },
     }
 
     this.adapter.createGame(body)
@@ -86,25 +117,7 @@ class Games {
 
 
   renderForm() {
-
-    let form = document.createElement("form")
-    let inputText = document.createElement("input")
-    let inputSubmit = document.createElement("input")
-
-    inputText.setAttribute("type", "text")
-    inputText.setAttribute("name", "name")
-    inputText.setAttribute("id", "name")
-    inputText.setAttribute("placeholder", "please enter your name")
-
-    inputSubmit.setAttribute("type", "submit")
-    inputSubmit.setAttribute("value", "Add to Leaderboard")
-    inputSubmit.setAttribute("id", "submit")
-
-    form.appendChild(inputText)
-    form.appendChild(inputSubmit)
-
-    return this.form.appendChild(form)
-
+    this.form.style.display = "block"
   }
 
 }
