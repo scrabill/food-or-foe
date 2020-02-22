@@ -16,19 +16,23 @@ class Games {
       this.createGame(e);
     });
 
+
+
     this.leaderboard = document.querySelector("#leaderboard")
 
     this.counterContainer = document.querySelector("#counter")
 
     this.foodButton = document.querySelector("#food")
     this.foeButton = document.querySelector("#foe")
+    this.peices = document.querySelector("#peices")
 
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
       console.log("THE GAME HAS BEGUN")
-      // Enable game buttons
-      this.foodButton.removeAttribute("disabled")
-      this.foeButton.removeAttribute("disabled")
+      // Show game peice and enable game buttons
+      this.peices.style.display = "block"
+      this.foodButton.toggleAttribute("disabled")
+      this.foeButton.toggleAttribute("disabled")
 
       // Start the timer
       this.startTimer()
@@ -36,10 +40,16 @@ class Games {
       // When the timer runs out, render the form to save your game
       setTimeout(this.renderForm, (3000));
 
+      // Disable game buttons when the timer runs out
+      setTimeout(this.endTimer, (3000));
     });
   }
 
   startTimer() {
+    // Reset score and timer if a game has already been played
+    this.score.innerText = 0
+    this.counterContainer.innerText = 3
+
     console.log("⏰")
 
     let countercounterContainer = this.counterContainer;
@@ -52,6 +62,13 @@ class Games {
         if (counter <= 0) clearInterval(printTime);
     }, 1000);
 
+  }
+
+  endTimer() {
+    console.log("THE GAME IS OVER")
+
+    document.getElementById("food").disabled = true;
+    document.getElementById("foe").disabled = true;
   }
 
   findUserByID(id) {
