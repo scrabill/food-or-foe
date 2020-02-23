@@ -13,6 +13,7 @@ class Emojis {
 
   initBindingsAndEventListeners() {
     this.emojiContainer = document.querySelector("#emoji")
+    this.emojiContainer.innerHTML = twemoji.parse("🍔")
 
     this.score = document.querySelector("#score")
 
