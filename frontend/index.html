@@ -73,8 +73,24 @@
       <div class="container">
         <h2 class="title is-2">Save Game</h2>
         <form>
-          <input type="text" name="name" id="name" placeholder="Player name" required>
-          <input type="submit" value="Add to Leaderboard" class="button is-outlined" id="submit">
+          <!-- <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input">
+            </div>
+          </div> -->
+          <div class="field">
+            <label class="label">Player Name</label>
+            <div class="control">
+              <input type="text" name="name" class="input" id="name" placeholder="Please enter your name" required>
+            </div>
+            <div class="field">
+              <br>
+              <div class="control">
+                <input type="submit" value="Add to Leaderboard" class="button is-outlined is-link" id="submit">
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </section>
