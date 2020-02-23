@@ -108,6 +108,7 @@ class Games {
     .then(game => {
       let gameObject = `<li>${game.score} - ${this.nameInput.value}</li>`
       this.leaderboard.innerHTML += gameObject
+      this.nameInput.value = ""
     })
 
   }
