@@ -29,7 +29,7 @@ Emoji.create(slug: "banana", character: "🍌", is_food?: true)
 # Creates foe emojis...please do not eat them
 Emoji.create(slug: "rocket ship", character: "🚀", is_food?: false)
 Emoji.create(slug: "unicorn", character: "🦄", is_food?: false)
-Emoji.create(slug: "shrimp", character: "🍤", is_food?: false)
+Emoji.create(slug: "airplane", character: "✈", is_food?: false)
 Emoji.create(slug: "robot", character: "🤖", is_food?: false)
 Emoji.create(slug: "light bulb", character: "💡", is_food?: false)
 Emoji.create(slug: "floppy disk", character: "💾", is_food?: false)
@@ -45,5 +45,5 @@ Emoji.create(slug: "gem stone", character: "💎", is_food?: false)
 
 # Creates some games and scores to populate the leaderboard
 5.times do
-  order = Game.create!(user_id: 1, score: Faker::Number.within(range: 19..45)])
+  order = Game.create!(user_id: 1, score: Faker::Number.within(range: 19..45))
 end
