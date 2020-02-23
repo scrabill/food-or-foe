@@ -28,7 +28,15 @@ class Games {
     });
 
 
-
+    this.leaderboardLink = document.querySelector("#show-leaderboard")
+    this.leaderboardContainer = document.querySelector("#leaderboard-container")
+    this.leaderboardLink.addEventListener('click', (e) => {
+      if (this.leaderboardContainer.style.display == "none") {
+        this.leaderboardContainer.style.display = "block"
+      } else {
+        this.leaderboardContainer.style.display = "none"
+      }
+    });
     this.leaderboard = document.querySelector("#leaderboard")
 
     this.counterContainer = document.querySelector("#counter")
