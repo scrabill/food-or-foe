@@ -1,0 +1,15 @@
+#header {
+  font-weight: bold;
+}
+
+/* Links */
+
+a, a:hover {
+  color: #fa163f;
+}
+
+.button.is-primary,
+.button.is-primary:hover,
+.button.is-primary:active {
+  background-color: #fa163f
+}
