@@ -49,7 +49,7 @@ class Games {
     this.startGame.addEventListener('click', (e) => {
       console.log("THE GAME HAS BEGUN")
       // Show game peice and enable game buttons
-      this.peices.style.display = "block"
+      this.peices.style.display = "flex"
       document.getElementById("food").disabled = false;
       document.getElementById("foe").disabled = false;
 
