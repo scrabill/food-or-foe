@@ -8,6 +8,17 @@ class Games {
 
   // Inherit properys and bindings, etc to emojis and games? Extends?
   initBindingsAndEventListeners() {
+    this.instructions = document.querySelector("#instructions")
+    this.howToButton = document.querySelector("#how-to-play")
+    this.howToButton.addEventListener('click', (e) => {
+      if (this.instructions.style.display == "none") {
+        this.instructions.style.display = "block"
+      } else {
+        this.instructions.style.display = "none"
+      }
+
+    });
+
     this.score = document.querySelector("#score")
     this.form = document.querySelector("#form")
     this.nameInput = document.querySelector("#name")
