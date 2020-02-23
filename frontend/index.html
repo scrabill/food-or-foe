@@ -2,52 +2,59 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <title>Food or Foe?</title>
   </head>
   <body>
-    <h1>Food or Foe?</h1>
+    <section class="section">
+    <div class="container">
+      <h1>Food or Foe?</h1>
 
-    <p>How many food emoji can you correctly identify in 30 seconds?</p>
+      <p>How many food emoji can you correctly identify in 30 seconds?</p>
 
-    <p>Each correct answer is worth 1 point. A wrong answer decreases your score by 1 point.</p>
+      <p>Each correct answer is worth 1 point. A wrong answer decreases your score by 1 point.</p>
 
-    <p>At the end of a round, add your name and score to the leaderboard!</p>
+      <p>At the end of a round, add your name and score to the leaderboard!</p>
 
-    <p>Happy guessing!</p>
-    <section id="gameboard">
-      <section id="peices" style="display:none;">
-        <h2 id="emoji"></h2>
-        <h3>Time: <span id="counter">3</span></h3>
-        <h3>Score: <span id='score'></span></h3>
+      <p>Happy guessing!</p>
+      <section id="gameboard">
+        <section id="peices" style="display:none;">
+          <h2 id="emoji"></h2>
+          <h3>Time: <span id="counter">3</span></h3>
+          <h3>Score: <span id='score'></span></h3>
+
+        </section>
+
+        <button type="button" name="button" id="start">Start Game!</button>
+        <button type="button" name="button" id="food" disabled>Food</button>
+        <button type="button" name="button" id="foe" disabled>Foe</button>
 
       </section>
 
-      <button type="button" name="button" id="start">Start Game!</button>
-      <button type="button" name="button" id="food" disabled>Food</button>
-      <button type="button" name="button" id="foe" disabled>Foe</button>
+      <section id="form" style="display: none;">
+        <h2>Save Game</h2>
+        <form>
+          <input type="text" name="name" id="name" placeholder="Player name" required>
+          <input type="submit" value="Add to Leaderboard" id="submit">
+        </form>
+      </section>
 
-    </section>
+      <section>
+        <h2>Leaderboard</h2>
 
-    <section id="form" style="display: none;">
-      <h2>Save Game</h2>
-      <form>
-        <input type="text" name="name" id="name" placeholder="Player name" required>
-        <input type="submit" value="Add to Leaderboard" id="submit">
-      </form>
-    </section>
+        <ul id="leaderboard">
 
-    <section>
-      <h2>Leaderboard</h2>
+        </ul>
+      </section>
 
-      <ul id="leaderboard">
+      <footer id="footer">
+        <p>Food or Foe built by Shannon Crabill | <a href="https://github.com/scrabill/food-or-foe">Github</a></p>
+      </footer>
+    </div>
+  </section>
 
-      </ul>
-    </section>
-
-    <footer id="footer">
-      <p>Food or Foe built by Shannon Crabill | <a href="https://github.com/scrabill/food-or-foe">Github</a></p>
-    </footer>
 
     <!-- TODO: Why are there so many script? -->
     <!-- Adapters, get all the data from the API, singulars for instances and plurals, for classes and methods (the bulk of the work) -->
