@@ -8,7 +8,7 @@ At the end of a round, add your name and score to the leaderboard!
 
 Happy guessing!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I1Ntg06JUaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![Screnshot of Food or Foe?](food-or-foe-screenshot.png)
 
 ## Installation
 
@@ -30,3 +30,7 @@ Food or Foe? has three models, each of which can be accessed at the following en
 - http://localhost:3000/api/v1/games
 - http://localhost:3000/api/v1/emojis
 - http://localhost:3000/api/v1/emojis/food
+
+## Misc
+
+- [Food or Foe? Video Demo](https://youtu.be/I1Ntg06JUaM) - 1:20
