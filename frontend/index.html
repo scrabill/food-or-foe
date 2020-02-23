@@ -47,12 +47,19 @@
     <!--end how-to-play-->
       <section class="section" id="gameboard">
         <div class="container">
-          <section id="peices" style="display:none;">
-            <h2 class="title is-2" id="emoji"></h2>
-            <h3 class="title is-3">Time: <span id="counter">3</span></h3>
-            <h3 class="title is-3">Score: <span id='score'></span></h3>
-
-          </section>
+          <!--start columns-->
+          <div class="columns is-centered" id="peices" style="display:none;">
+            <div class="column is-one-quarter">
+              <h3 class="title is-3">Time: <span id="counter">3</span></h3>
+            </div>
+            <div class="column is-half">
+              <h2 class="title is-2" id="emoji"></h2>
+            </div>
+            <div class="column is-one-quarter">
+              <h3 class="title is-3">Score: <span id='score'></span></h3>
+            </div>
+          </div>
+          <!--end columns-->
 
           <button type="button" name="button" class="button is-primary" id="start">Start Game!</button>
           <button type="button" name="button" class="button" id="food" disabled>Food</button>
