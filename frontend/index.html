@@ -9,30 +9,20 @@
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <title>Food or Foe?</title>
   </head>
-  <body class="has-navbar-fixed-top">
+  <body>
     <!--start nav-->
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <h1 class="navbar-item">Food or Foe?</h1>
-
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" id="how-to-play">
-            <strong>How to Play</strong>
-          </a>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column has-text-left">
+            Food or Foe?
+          </div>
+          <div class="column has-text-right">
+            <a id="how-to-play">How to Play</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>Leaderboard</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="navbar-menu">
-      <div class="navbar-start">
-      </div>
-
-      <div class="navbar-end">
-
-      </div>
-    </div>
-  </nav>
+    </section>
     <!--end nav-->
     <!--start how-to-play-->
     <section class="section" id="instructions" style="display: none;">
@@ -55,9 +45,6 @@
             <div class="column">
               <h2 class="title is-2" id="emoji"></h2>
             </div>
-
-          </div>
-          <div class="columns is-mobile">
             <div class="column">
               <h3 class="title is-3">Time: <span id="counter">3</span></h3>
             </div>
