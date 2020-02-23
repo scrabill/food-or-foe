@@ -57,17 +57,17 @@ class Games {
       this.startTimer()
 
       // When the timer runs out, render the form to save your game
-      setTimeout(this.renderForm, (3000));
+      setTimeout(this.renderForm, (30000));
 
       // Disable game buttons when the timer runs out
-      setTimeout(this.endTimer, (3000));
+      setTimeout(this.endTimer, (30000));
     });
   }
 
   startTimer() {
     // Reset score and timer if a game has already been played
     this.score.innerText = 0
-    this.counterContainer.innerText = 3
+    this.counterContainer.innerText = 30
 
     console.log("⏰")
 
