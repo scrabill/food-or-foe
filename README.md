@@ -20,7 +20,7 @@ rails db:seed
 rails s
 ```
 
-To play, open `frontend/index.html` in a browser
+To play, open `frontend/index.html` in a browser. If you encounter any bugs or glitches while playing, please open an issue so that I can look into finding a fix.
 
 ## API Endpoints
 
