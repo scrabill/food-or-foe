@@ -34,3 +34,4 @@ Food or Foe? has three models, each of which can be accessed at the following en
 ## Misc
 
 - [Food or Foe? Video Demo](https://youtu.be/I1Ntg06JUaM) - 1:20
+- [Creating Associated Objects in Single Page Applications](https://shannoncrabill.com/blog/ruby-on-rails-api-single-page-javascript-application/)
