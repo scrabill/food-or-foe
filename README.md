@@ -31,6 +31,18 @@ Food or Foe? has three models, each of which can be accessed at the following en
 - http://localhost:3000/api/v1/emojis
 - http://localhost:3000/api/v1/emojis/food
 
+# Contributing
+
+Is this game missing your favorite emoji?
+
+To contribute, please make a pull request with at least the name of the emoji, it's character and if it is a food or not to the backend/db/seeds.rb file.
+
+Here's how I would add 🥓 (bacon)
+
+```ruby
+Emoji.create(slug: "bacon", character: "🥓", is_food?: true)
+```
+
 ## Misc
 
 - [Food or Foe? Video Demo](https://youtu.be/I1Ntg06JUaM) - 1:20
