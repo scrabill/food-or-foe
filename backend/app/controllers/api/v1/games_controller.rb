@@ -6,6 +6,12 @@ class Api::V1::GamesController < ApplicationController
     render json: @games.to_json(include: [:user]), status: 200
   end
 
+  def leaderboard
+    @games = Game.leaderboard
+
+    render json: @games.to_json(include: [:user]), status: 200
+  end
+
   def show
     @game = Game.find_by(id: params[:id])
 

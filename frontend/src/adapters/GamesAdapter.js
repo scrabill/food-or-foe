@@ -1,6 +1,6 @@
 class GamesAdapter {
   constructor() {
-    this.baseURL = "http://localhost:3000/api/v1/games"
+    this.baseURL = "http://localhost:3000/api/v1/games/leaderboard"
   }
 
   getGames() {

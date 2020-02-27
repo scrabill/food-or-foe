@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/emojis/food',  to: 'emojis#food'
+      get '/games/leaderboard',  to: 'games#leaderboard'
 
       resources :emojis, :users, :games
     end
