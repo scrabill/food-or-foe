@@ -31,7 +31,7 @@ Food or Foe? has three models, each of which can be accessed at the following en
 - http://localhost:3000/api/v1/emojis
 - http://localhost:3000/api/v1/emojis/food
 
-# Contributing
+## Contributing
 
 Is this game missing your favorite emoji?
 
