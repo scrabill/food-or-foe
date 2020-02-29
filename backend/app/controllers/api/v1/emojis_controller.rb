@@ -8,7 +8,11 @@ class Api::V1::EmojisController < ApplicationController
   def show
     @emoji = Emoji.find_by_id(params[:id])
 
-    render json: @emoji, status: 200
+    if @emoji
+      render json: @emoji, status: 200
+    else
+      render json: {error: "Emoji not found"}, status: 404
+    end
   end
 
   def food

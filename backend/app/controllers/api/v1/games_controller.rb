@@ -15,7 +15,11 @@ class Api::V1::GamesController < ApplicationController
   def show
     @game = Game.find_by(id: params[:id])
 
-    render json: @game, status: 200
+    if @game
+      render json: @game, status: 200
+    else
+      render json: {error: "Game not found"}, status: 404
+    end
   end
 
   # TODO: Account for if a new game is being created by a user that already exists (append to user games array) Validation failed: Name has already been taken

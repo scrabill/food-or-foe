@@ -10,7 +10,11 @@ class Api::V1::UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
 
-    render json: @user.to_json(include: [:games]), status: 200
+    if @user
+      render json: @user.to_json(include: [:games]), status: 200
+    else
+      render json: {error: "User not found"}, status: 404
+    end
   end
 
   def create
