@@ -99,21 +99,6 @@ class Games {
     return user
   }
 
-  // {"score"=>"", "game"=>{"score"=>""}}
-
-//   {
-// "id": 37,
-// "user_id": 1,
-// "score": 123,
-// "created_at": "2020-02-22T01:08:48.701Z",
-// "updated_at": "2020-02-22T01:08:48.701Z",
-// "user": {
-// "id": 1,
-// "name": "Shannon",
-// "created_at": "2020-02-14T04:12:37.070Z",
-// "updated_at": "2020-02-14T04:12:37.070Z"
-// }
-// }
   createGame(e) {
     e.preventDefault()
     console.log("Saving the game...")
@@ -139,12 +124,8 @@ class Games {
       games.forEach(game => this.games.push(new Game(game)))
     })
     .then(() => {
-      this.render()
       this.renderScores()
     })
-  }
-
-  render() {
   }
 
   renderScores() {
