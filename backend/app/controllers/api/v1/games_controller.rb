@@ -42,16 +42,6 @@ class Api::V1::GamesController < ApplicationController
     end
   end
 
-#   def create
-#     # binding.pry
-#     question = Question.new(question_params)
-#     user = User.find_by_id(params[:user_id])
-#     question.user = user
-#     if question.save
-#         render json: question, status: 200
-#     end
-# end
-
   def update
     @game = Game.find_by(name: params[:name])
     @Game.update(game_params)
