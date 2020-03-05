@@ -52,7 +52,8 @@ class Games {
       this.peices.style.display = "flex"
       document.getElementById("food").disabled = false;
       document.getElementById("foe").disabled = false;
-      document.getElementById("start").disabled = true
+      document.getElementById("start").disabled = true;
+      document.getElementById("submit").disabled = true;
 
       // Start the timer
       this.startTimer()
@@ -90,6 +91,7 @@ class Games {
     document.getElementById("food").disabled = true;
     document.getElementById("foe").disabled = true;
     document.getElementById("start").disabled = false;
+    document.getElementById("submit").disabled = false;
   }
 
   findUserByID(id) {
@@ -116,6 +118,8 @@ class Games {
       this.leaderboard.innerHTML += gameObject
       this.nameInput.value = ""
     })
+
+    document.getElementById("submit").disabled = true;
 
   }
 
