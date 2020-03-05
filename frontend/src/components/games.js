@@ -48,10 +48,11 @@ class Games {
     this.startGame = document.querySelector("#start")
     this.startGame.addEventListener('click', (e) => {
       console.log("THE GAME HAS BEGUN")
-      // Show game peice and enable game buttons
+      // Show game peice and enable game buttons, disable start button while game is in session
       this.peices.style.display = "flex"
       document.getElementById("food").disabled = false;
       document.getElementById("foe").disabled = false;
+      document.getElementById("start").disabled = true
 
       // Start the timer
       this.startTimer()
@@ -88,6 +89,7 @@ class Games {
 
     document.getElementById("food").disabled = true;
     document.getElementById("foe").disabled = true;
+    document.getElementById("start").disabled = false;
   }
 
   findUserByID(id) {
